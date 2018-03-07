@@ -1,0 +1,45 @@
+.header-home{
+    background-color: #ea5106;
+}
+.header-home a{
+    color: #444;
+}
+.header-home-wrapper{
+    min-height: 20rem;
+    color: #fff;
+}
+.article-cont-image{
+    max-width: 100%;
+    min-height: 15rem;
+    max-height: 15rem;
+}
+.article-image{
+    width: 100%!important;
+    min-height: 14rem;
+    max-height: 14rem;
+}
+
+.f-25{
+    font-size: .25rem;
+}
+.f-5{
+    font-size: .5rem;
+}
+.f-75{
+    font-size: .75rem;
+}
+.f1{
+    font-size: 1rem;
+}
+.f1-25{
+    font-size: 1.25rem;
+}
+.f1-5{
+    font-size: 1.5rem;
+}
+.f1-75{
+    font-size: 1.75rem;
+}
+.f2{
+    font-size: 2rem ;
+}

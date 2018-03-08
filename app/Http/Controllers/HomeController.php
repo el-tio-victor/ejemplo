@@ -29,7 +29,7 @@ class HomeController extends Controller
     {
         $articles = Article::orderBy('id','Des')->get();
         $articles = $this->relations($articles);
-        return view('home.partials.contentArticles')
+        return view('home.blog.partials.contentArticles')
             ->with('articles',$articles);
     }
 

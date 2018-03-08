@@ -8,14 +8,21 @@
     min-height: 20rem;
     color: #fff;
 }
-.article-cont-image{
-    max-width: 100%;
-    min-height: 15rem;
-    max-height: 15rem;
+.articles-cont-image,.article-cont-image{
+    
+    position: relative;
+    width: 90%;
+    height: 14rem;
+}
+.articles-cont-image,.article-cont-image{
+    width: 20rem;
+    height: 20rem;
 }
 .article-image{
-    width: 100%!important;
-    min-height: 14rem;
-    max-height: 14rem;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
 }
 

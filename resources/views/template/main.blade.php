@@ -19,7 +19,7 @@
             @yield('content-articles')
         </div>
         <aside class="col-lg-4 border border-success">
-            @include('home.partials.contentCategories')
+            @include('home.blog.partials.contentCategories')
         </aside>
     </section>
     

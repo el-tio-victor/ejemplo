@@ -77,9 +77,14 @@ Auth::routes();
 
 Route::get('/dashboard',[function(){return view('dashboard.template.main');}]);
 
-Route::get('/',[
+Route::get('/blog',[
     "uses" => "HomeController@index",
-    "as"   => "home.partials.contentArticles"
+    "as"   => "home.blog.partials.contentArticles"
+]);
+
+Route::get('/blog/articles/{slug}',[
+    "uses"=>"ArticlesController@viewArticle",
+    "as"=>"home.blog.article"
 ]);
 
 

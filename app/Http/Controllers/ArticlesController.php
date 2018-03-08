@@ -171,4 +171,13 @@ class ArticlesController extends Controller
                 }
             }
     }
+    public function viewArticle($slug){
+        $article= Article::findBySlugOrFail($slug);
+        $article->categories;
+        $article->images;
+        $article->tags;
+        //dd($article->title);
+        return view('home.blog.partials.contentArticle')
+            ->with('article',$article);
+    }
 }

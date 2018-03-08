@@ -26,7 +26,7 @@ input[type=text]{
     padding: .1rem .4rem;;
 }
 .border,.table thead th{
-    border-color: #ccc!important;
+    border-color: #ccc;
 }
 .header{
     background-color: #ea5106;
@@ -43,10 +43,10 @@ input[type=text]{
     padding: .5rem 0;
 }
 .main{
-    margin:  1rem auto;
+    margin:  2.1rem auto 0 auto;
     padding:3rem;
     min-height: 35rem;
-    background-color: rgb(224, 223, 223);
+    background-color: rgb(228, 225, 225);
     border-color:white!important;
 }
 .btn{
@@ -103,3 +103,34 @@ input[type=text]{
     border-color: transparent;
     appearance: none;
 }
+.f-25{
+    font-size: .25rem;
+}
+.f-5{
+    font-size: .5rem;
+}
+.f-75{
+    font-size: .75rem;
+}
+.f1{
+    font-size: 1rem;
+}
+.f1-25{
+    font-size: 1.25rem;
+}
+.f1-5{
+    font-size: 1.5rem;
+}
+.f1-75{
+    font-size: 1.75rem;
+}
+.f2{
+    font-size: 2rem ;
+}
+.f3{font-size: 3rem ;}
+.f4{font-size: 4rem ;}
+.f5{font-size: 5rem ;}
+.f6{font-size: 6rem ;}
+.f7{font-size: 7rem ;}
+.f8{font-size: 8rem ;}
+.f9{font-size: 9rem ;}

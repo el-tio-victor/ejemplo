@@ -17,7 +17,7 @@ class CategoriesController extends Controller
     public function index()
     {
         $categories = Category::orderBy('id','ASC')->paginate(3);
-        return view('dashboard.categories.index')->with('categories',$categories);
+        return view('dashboard.blog.categories.index')->with('categories',$categories);
     }
 
     /**
@@ -27,7 +27,7 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-        return view('dashboard.categories.create');
+        return view('dashboard.blog.categories.create');
     }
 
     /**
@@ -64,7 +64,7 @@ class CategoriesController extends Controller
     public function edit($id)
     {
         $category=Category::find($id);
-        return view('dashboard.categories.edit')->with('category',$category);
+        return view('dashboard.blog.categories.edit')->with('category',$category);
     }
 
     /**

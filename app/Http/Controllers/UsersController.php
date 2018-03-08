@@ -20,7 +20,7 @@ class UsersController extends Controller
     
     public function create(){
         //dd('mensaje');
-        return view('dashboard.users.create');
+        return view('dashboard.blog.users.create');
     }
     public function store(UserRequest $r){
         $user= new User($r->all());
@@ -32,7 +32,7 @@ class UsersController extends Controller
     public function index(){
        
          $users=User::orderBy('id','ASC')->paginate(5);
-         return view('dashboard.users.index')->with('users',$users);
+         return view('dashboard.blog.users.index')->with('users',$users);
      } 
 
     public function destroy($id){
@@ -44,7 +44,7 @@ class UsersController extends Controller
     public function edit($id){
         $user =User::find($id);
 
-        return view('dashboard.users.edit')->with('user',$user);
+        return view('dashboard.blog.users.edit')->with('user',$user);
     }
 
     public function update(Request $r,$id){

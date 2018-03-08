@@ -1,7 +1,8 @@
 
+
 @if(Auth::user()->admin())
-    <div class="p-2 panel-menu-btn">
-        <a class="nav-link active" href="{{ route('users.index')}}">
+    <div class=" panel-menu-btn">
+        <a class="nav-link" href="{{ route('users.index')}}">
             <i class="icon-user"></i>Usuarios
         </a>    
     </div>
@@ -25,4 +26,21 @@
     <a class="nav-link" href=" {{route('images.index')}} ">
         <i class="icon-image"></i>Imágenes
     </a>
+</div>
+<div>
+    <div class="navbar-header">
+        <span class=" collapsed" data-toggle="collapse" data-target="#app-navbar" 
+            aria-expanded="false">
+            prueba
+        </span>
+    </div>
+    <div class="collapse navbar-collapse show" id="app-navbar">
+    
+                <!-- Right Side Of Navbar -->
+        <ul class="nav navbar-nav navbar-right">
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+        </ul>
+    </div>
 </div>

@@ -12,6 +12,6 @@ class ImagesController extends Controller
         $images->each(function($images){
             $images->article;
         });
-        return view('dashboard.images.index')->with('images',$images);
+        return view('dashboard.blog.images.index')->with('images',$images);
     }
 }

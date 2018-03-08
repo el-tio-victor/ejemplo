@@ -15,7 +15,7 @@ class TagsController extends Controller
     public function index(Request $r)
     {
         $tags =  Tag::SearchTag($r->name)->orderBy('id','ASC')->paginate(3);
-        return view('dashboard.tags.index')->with('tags',$tags);
+        return view('dashboard.blog.tags.index')->with('tags',$tags);
     }
 
     /**
@@ -26,7 +26,7 @@ class TagsController extends Controller
     public function create()
     {
         
-        return view('dashboard.tags.create')->with('categories');
+        return view('dashboard.blog.tags.create')->with('categories');
     }
 
     /**
@@ -63,7 +63,7 @@ class TagsController extends Controller
     public function edit($id)
     {
         $tag = Tag::find($id);
-        return view('dashboard.tags.edit')->with('tag',$tag);
+        return view('dashboard.blog.tags.edit')->with('tag',$tag);
     }
 
     /**

@@ -1,7 +1,7 @@
 @extends('template.main')
 @section('content-articles')
     <h2><strong>Articulos</strong></h2>
-    <section class="d-flex">
+    <section class="d-flex flex-wrap">
         @foreach($articles as $article)
         <article class="col-lg-6 border-bottom mb-4 article">
             <div class="col-12 card-image border article-cont-image">

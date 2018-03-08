@@ -27,7 +27,7 @@ class ArticlesController extends Controller
             $articles->category;
             $articles->user;
         });
-        return view('dashboard.articles.index')
+        return view('dashboard.blog.articles.index')
             ->with('articles',$articles);
     }
 
@@ -40,7 +40,7 @@ class ArticlesController extends Controller
     {
         $categories = Category::orderBy('id','ASC')->pluck('name','id');
         $tags = Tag::orderBy('id','ASC')->pluck('name','id');
-        return view('dashboard.articles.create')
+        return view('dashboard.blog.articles.create')
             ->with('categories',$categories)
             ->with('tags',$tags);
     }
@@ -103,7 +103,7 @@ class ArticlesController extends Controller
         $categories= Category::orderBy('id','DES')->get()->pluck('name','id');
         $tags= Tag::orderBy('id','DES')->get()->pluck('name','id');
         $article_tags=$article->tags->pluck('id')->ToArray();
-        return view('dashboard.articles.edit')
+        return view('dashboard.blog.articles.edit')
         ->with('article',$article)
         ->with('categories',$categories)
         ->with('article_tags',$article_tags)

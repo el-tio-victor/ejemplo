@@ -1,5 +1,5 @@
 
-@extends('admin.template.main')
+@extends('dashboard.template.main')
 
 @section('title')
     <h2>Agregar Usuario</h2>
@@ -9,7 +9,7 @@
 <div class="p-3 border">
  {!! Form::open( ['route'=>'users.store','method' => 'POST'] ) !!}
     <div class="col d-flex form-group">
-        @include('admin.template.partials.form',
+        @include('dashboard.template.partials.form',
             ['tag'=>'text',
             'name'=>'name',
             'label'=>'Nombre',
@@ -26,7 +26,7 @@
         
     
     <div class="col  d-flex form-group">
-        @include('admin.template.partials.form',
+        @include('dashboard.template.partials.form',
             ['tag'=>'email',
             'name'=>'email',
             'label'=>'Correo',
@@ -41,7 +41,7 @@
         
     </div>
     <div class="col  d-flex form-group">
-        @include('admin.template.partials.form',
+        @include('dashboard.template.partials.form',
             ['tag'=>'password',
             'name'=>'password',
             'label'=>'Contraseña',

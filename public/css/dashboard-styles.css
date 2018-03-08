@@ -2,13 +2,21 @@
 .header-wrapper{
     min-height: 2rem;
 }
+.panel-menu-btn:hover,
+.panel-menu-header{
+    background-color: #f36e2b;
+}
 .panel-menu{
     min-width: 120px;
     min-height:23rem;
     background-color: #ea5106;
 }
+.color-orange,
 .panel-menu-separator{
     color: #ea5106;
+}
+.color-orange{
+    border-color: #ea5106;
 }
 .panel-menu-btn,
 .panel-menu a{
@@ -18,10 +26,7 @@
     background-color: #fff;
 }
 .panel-menu-separator{
-    
+    min-height:2.1rem;
     border-color: #ea5106!important;
     border-width: .2rem!important;
-}
-.panel-menu-btn:hover{
-    background-color: #f36e2b;
 }

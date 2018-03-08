@@ -1,4 +1,4 @@
-@extends('admin.template.main') 
+@extends('dashboard.template.main') 
 @section('title','Editar Usuario: '.$user->name)
 
 @section('content')

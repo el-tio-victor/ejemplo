@@ -6,6 +6,9 @@
 
 @section('content')
     <div class="border p-3">
+         @if ($errors->has('password'))
+            dd($errors)
+         @endif
         {!! Form::open( ['route'=>'articles.store','method'=>'POST','files'=>true] ) !!}
             <div class="col d-flex form-group">
                 {!! Form::label('title','Titulo') !!}

@@ -1,4 +1,4 @@
-@extends('admin.template.main')
+@extends('dashboard.template.main')
 
 @section('title')
 <h2>
@@ -38,7 +38,7 @@
                     
                     <td>{{ $user->email }}</td>
                     <td>
-                        <a class='btn btn-destroy' role='button' href="{{ route('admin.users.destroy',$user->id) }}">
+                        <a class='btn btn-destroy' role='button' href="{{ route('dashboard.users.destroy',$user->id) }}">
                             <span class="icon-cross"></span>
                         </a> 
                         <a class='btn btn-warning' href=" {{ route('users.edit', $user->id ) }} ">

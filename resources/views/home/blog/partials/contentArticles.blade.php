@@ -1,13 +1,9 @@
 @extends('template.main')
 @section('content')
-
-<h2 class="">Articulos</h2>
- <section class="col-12 d-flex justify-content-around p-4">
-        <div class="col-lg-7 articles-cont ">
-               
-            <section class="d-flex flex-wrap">
+    @component('home.blog.components.simple-panel')
+        @slot('article')
                 @foreach($articles as $article)
-                    <article class="col-lg-6  mb-4 article">
+                    <article class="col-10 col-sm-6 m-auto mb-md-4 article">
                         <div class="col m-auto card-image  articles-cont-image">
                             @foreach($article->images as $image)
                                 <a href="{{route('home.blog.article',$article->slug)}}">
@@ -35,13 +31,8 @@
                         </footer>
                     </article>
                 @endforeach
-            </section>
-        </div>
-        <aside class="col-lg-4 aside-blog">
-            @include('home.blog.partials.contentCategories')
-        </aside>
-    </section>
-
+        @endslot
+    @endcomponent
 
       
     

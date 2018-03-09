@@ -8,16 +8,20 @@ html,body{
     color: #444;
 }
 p{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 h2{
-    font-weight: 700;
+    font-weight: 500;
     font-size: 3rem;
     color:#444;
+    text-shadow:1px 1px 1px #ea5106;
     margin:2rem 0 1rem 3rem;
 }
+h2 i{
+    text-shadow: 1px 1px 3px #ea5106;
+}
 h3{
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     font-weight: 500;
 }
 form{
@@ -157,3 +161,17 @@ input[type=text]{
 .f7{font-size: 7rem ;}
 .f8{font-size: 8rem ;}
 .f9{font-size: 9rem ;}
+@media (min-width: 576px) {  }
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+    h3{
+        font-size: 1.7rem;
+    }
+ }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {  }
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {  }

@@ -24,6 +24,8 @@
             <div class="col form-group">
                 {!! Form::label('content','Contenido') !!}
                 {!! Form::textarea('content',$article->content,['class'=>'form-control textarea-content'])!!}
+                 {!! Form::text('summary',null,['class'=>'form-control'
+                    ,'placeholder'=>'summary','hidden']) !!}
             </div>
             <div class="col form-group">
                 {!! Form::label('tags','Tags') !!}

@@ -42,7 +42,7 @@
                     </div>
                     
                     <div class="content">
-                        {!!$article->content!!}
+                        <p>{!!$article->content!!}</p>
                     </div>
             </article>
         @endslot

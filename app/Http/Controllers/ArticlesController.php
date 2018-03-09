@@ -120,7 +120,10 @@ class ArticlesController extends Controller
     public function update(Request $request, $id)
     {
         $article = Article::find($id);
+        
+        //dd($request->all());
         $article->fill($request->all());
+        $article->summary=$this->character_limiter($request->content);
         $article->save();
 
         $article->tags()->sync($request->tags);
@@ -149,14 +152,14 @@ class ArticlesController extends Controller
     {
             if (strlen($str) < $n)
             {
-                return $str;
+                return $str.$end_char;
             }
 
             $str = preg_replace("/\s+/", ' ', str_replace(array("\r\n", "\r", "\n"), ' ', $str));
 
             if (strlen($str) <= $n)
             {
-                return $str;
+                return $str.$end_char;
             }
 
             $out = "";
@@ -167,7 +170,7 @@ class ArticlesController extends Controller
                 if (strlen($out) >= $n)
                 {
                     $out = trim($out);
-                    return (strlen($out) == strlen($str)) ? $out : $out.$end_char;
+                    return (strlen($out) == strlen($str)) ? $out.$end_char : $out.$end_char;
                 }
             }
     }

@@ -1,3 +1,7 @@
+.badge-category{
+    background-color: #ea5106;
+    color: white;
+}
 .header-home{
     background-color: #ea5106;
 }
@@ -18,11 +22,31 @@
     width: 20rem;
     height: 20rem;
 }
+.article h3{
+    min-height: 4rem;
+}
 .article-image{
     position: absolute;
     left: 0;
     width: 100%;
     height: 100%;
-    
+}
+.article-ribbon{
+    border:solid .08rem #ea5106;
+    border-right: 0;
+    border-left: 0;
+    padding: .125rem 1rem;
+    margin: .125rem 0;
+}
+.aside-blog,
+.articles-cont{
+    padding-top:3rem;
+}
+.aside-blog{
+    border-left:solid .2rem #ea5106;
+    padding-left:2rem;
+}
+.aside-blog .border-bottom{
+    border-color: #444 !important;
 }
 

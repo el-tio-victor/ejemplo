@@ -8,20 +8,18 @@
     <link rel="stylesheet" href=" {{asset('plugins/bootstrap/css/bootstrap.min.css')}} ">
     <link rel="stylesheet" href=" {{asset('css/style-home-blog.css')}} ">
     <link rel='stylesheet' href="{{ asset('css/master-style.css') }}">
-    <link rel='stylesheet' href="{{ asset('css/fonts-style.css') }}"> 
+    <link rel='stylesheet' href="{{ asset('css/fonts-style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300,400,500i,700" rel="stylesheet">
     <title>Prueba de Blog</title>
 </head>
 <body>
     @include('home.partials.header')
+
+    @section('content')
+
+    @show
     
-    <section class="border col-12 d-flex justify-content-around p-4">
-        <div class="col-lg-7  border border-primary">
-            @yield('content-articles')
-        </div>
-        <aside class="col-lg-4 border border-success">
-            @include('home.blog.partials.contentCategories')
-        </aside>
-    </section>
+   
     
 
     

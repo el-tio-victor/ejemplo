@@ -40,7 +40,6 @@
                             <hr class='color-orange'>
                             <span class='f2'>Panel de Administración</span>
                         </div>
-                        
                     @show
                 </div>
    

@@ -14,11 +14,11 @@ h2{
     font-weight: 500;
     font-size: 3rem;
     color:#444;
-    text-shadow:1px 1px 1px #ea5106;
+    text-shadow:2px 1px 2px #ea5106;
     margin:2rem 0 1rem 3rem;
 }
 h2 i{
-    text-shadow: 1px 1px 3px #ea5106;
+    text-shadow: 1px 2px 2px #ea5106;
 }
 h3{
     font-size: 1.4rem;
@@ -33,11 +33,9 @@ form{
 }
 .btn-login{
     cursor: pointer;
-    border-radius: 1.3rem !important;
-    border: solid .1rem #444;
+    border: right solid .1rem #444;
     padding: .4rem .4rem;
     background-color: transparent;
-
     font-size: 1.5rem;
     font-weight: lighter;
     color: #444444;
@@ -51,6 +49,15 @@ input:focus{
 }
 input[type=text]{
     padding: .1rem .4rem;;
+}
+.navbar-header .dropdown-menu{
+    border-radius: 0!important;
+    background-color: transparent;
+    padding: 0 .3rem;
+    border-width: .2rem;
+    border-top:0;
+    border-right: 0;
+    border-bottom:0;
 }
 .border,.table thead th{
     border-color: #ccc;

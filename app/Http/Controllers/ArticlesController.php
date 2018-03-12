@@ -10,6 +10,7 @@ use App\Http\Requests\ArticleRequest;
 use Illuminate\Http\Request;
 use illuminate\Support\Facades\Redirect;
 use Laracasts\Flash;
+use \Cviebrock\EloquentSluggable\Services\SlugService;
 
 class ArticlesController extends Controller
 {
@@ -124,6 +125,8 @@ class ArticlesController extends Controller
         //dd($request->all());
         $article->fill($request->all());
         $article->summary=$this->character_limiter($request->content);
+        $slug = SlugService::createSlug(Article::class, 'slug', $request->title, ['unique' => false]);
+        $article->slug=$slug;
         $article->save();
 
         $article->tags()->sync($request->tags);

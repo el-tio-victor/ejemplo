@@ -1,6 +1,8 @@
-@extends('layouts.app')
+@extends('template.main')
 
-
+@component('home.partials.header')
+    
+@endcomponent
 
 @section('content')
 <div class="container border">

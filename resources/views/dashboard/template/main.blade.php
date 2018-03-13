@@ -16,7 +16,8 @@
 </head>
 <body>
 
-@include('home.partials.header')
+@component('home.partials.header')
+@endcomponent
 
 <main class=''>
     <section class=" d-flex flex-wrapp main-wrapper">

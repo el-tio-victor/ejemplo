@@ -31,17 +31,7 @@ form{
     font-weight: 500;
     font-size: .92rem;
 }
-.btn-login{
-    cursor: pointer;
-    border: right solid .1rem #444;
-    padding: .4rem .4rem;
-    background-color: transparent;
-    font-size: 1.5rem;
-    font-weight: lighter;
-    color: #444444;
 
-    outline: none!important;
-}
 button:focus,
 input:focus{
     outline: 0!important;
@@ -100,6 +90,9 @@ input[type=text]{
 .pagination li.active{
     background-color: #007bff;
     color: #fff;
+}
+.nav-link.active{
+    color: white;
 }
 .btn-menu{
     cursor: pointer;

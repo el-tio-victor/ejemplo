@@ -13,7 +13,7 @@
     <title>Prueba de Blog</title>
 </head>
 <body>
-    @include('home.partials.header')
+    {{--@include('home.partials.header')--}}
 
     @section('content')
 

@@ -1,4 +1,7 @@
 @extends('template.main')
+@component('home.partials.header')
+    <h1>Blog del Victor</h1>
+@endcomponent
 @section('content')
     @component('home.blog.components.simple-panel')
         @slot('article')
@@ -6,7 +9,7 @@
                     <article class="col-10 col-sm-6 m-auto mb-md-4 article">
                         <div class="col m-auto card-image  articles-cont-image">
                             @foreach($article->images as $image)
-                                <a href="{{route('home.blog.article',$article->slug)}}">
+                                <a href="{{route('blog.article',$article->slug)}}">
                                     <img src="{{asset('images/articles/'.$image->name)}}"
                                     alt="{{$article->title.' blog gomez-ste'}}" class='article-image'
                                     width="450" height="250">

@@ -73,18 +73,24 @@ Route::group(['prefix' => 'dashboard','middleware'=>'auth'],function(){
 
 });
 
+Route::get('/dashboard',[function(){return view('dashboard.template.main');}]);
+
 Auth::routes();
 
-Route::get('/dashboard',[function(){return view('dashboard.template.main');}]);
+
 
 Route::get('/blog',[
     "uses" => "HomeController@index",
-    "as"   => "home.blog.partials.contentArticles"
+    "as"   => "blog"
 ]);
+
+Route::get('/',[function(){
+    return view('home.index.contentIndex');}
+])->name('home');
 
 Route::get('/blog/articles/{slug}',[
     "uses"=>"ArticlesController@viewArticle",
-    "as"=>"home.blog.article"
+    "as"=>"blog.article"
 ]);
 
 

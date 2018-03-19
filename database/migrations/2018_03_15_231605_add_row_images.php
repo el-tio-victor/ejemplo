@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddSluggToArticle extends Migration
+class AddRowImages extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class AddSluggToArticle extends Migration
      */
     public function up()
     {
-        //
-        schema::table('articles',function(Blueprint $table){
-            $table->string('slug')->nullable();
+        Schema::table('images', function (Blueprint $table) {
+            //
+            
+            //$table->foreign('work_id')->references('id')->on('works')->onDelete('cascade');
         });
         schema::table('works',function(Blueprint $table){
             $table->string('slug')->nullable();
@@ -29,9 +30,8 @@ class AddSluggToArticle extends Migration
      */
     public function down()
     {
-        /*
-        schema::table('articles',function(Blueprint $table){
-            $table->dropCollumn('slug');
-        });*/
+        Schema::table('images', function (Blueprint $table) {
+            //
+        });
     }
 }

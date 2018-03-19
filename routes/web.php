@@ -73,7 +73,8 @@ Route::group(['prefix' => 'dashboard','middleware'=>'auth'],function(){
 
 });
 
-Route::get('/dashboard',[function(){return view('dashboard.template.main');}]);
+Route::get('/dashboard',[function(){return view('dashboard.template.main');}])
+->middleware('auth');
 
 Auth::routes();
 

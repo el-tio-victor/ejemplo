@@ -19,6 +19,9 @@
 
     @show
     
+    @section('footer')
+        Todittitos los derechos reservados
+    @show
    
     
 
@@ -29,7 +32,10 @@
         crossorigin="anonymous">
     </script> 
     <script src=" {{asset('plugins/bootstrap/js/bootstrap.min.js')}} "></script>
-    
+    <script src=" {{asset('plugins/bootstrap/js/bootstrap.min.js')}} "></script>
+     <script src=" {{asset('plugins/velocity/velocity.min.js')}} "></script>
+    <script src=" {{asset('js/animation-logo.js')}} "></script>
+
     @yield('js')   
 </body>
 </html>

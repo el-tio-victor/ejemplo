@@ -1,6 +1,6 @@
 @extends('template.main')
 @component('home.partials.header')
-    <h1>Blog del Victor</h1>
+    <h1>Blog</h1>
 @endcomponent
 @section('content')
     @component('home.blog.components.simple-panel')

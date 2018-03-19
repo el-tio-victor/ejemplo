@@ -1,22 +1,7 @@
 @extends('template.main')
 
 @component('home.partials.header')
-    
-@endcomponent
-
-@section('content')
-<div class="container border">
-    <div class="row">
-        <div class="col-md-8 col-lg-12 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                     @section('title')
-                        <h2>Login <span class="icon-user"></span></h2>
-                    @endsection
-                </div>
-
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
                         <div class=" form-group{{ $errors->has('email') ? ' has-error' : '' }}">
@@ -69,9 +54,5 @@
                             </div>
                         </div>
                     </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
+@endcomponent
+

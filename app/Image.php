@@ -12,4 +12,8 @@ class Image extends Model
     public function article(){
         return $this->belongsTo('App\Article');
     }
+
+    public function work(){
+        return $this->belongsTo('App\Work');
+    }
 }

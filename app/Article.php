@@ -10,6 +10,7 @@ class Article extends Model
 {
     use Sluggable;
     use SluggableScopeHelpers;
+    
     //
     protected $table = 'articles';
     protected $fillable =['title','content','category_id','user_id'];

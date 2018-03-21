@@ -2,7 +2,7 @@
 @extends('dashboard.template.main')
 
 @section('title')
-    <h2>Agregar Usuario</h2>
+    <h3>Agregar Usuario</h3>
 @endsection
 
 @section('content')

@@ -71,8 +71,10 @@ class ArticlesController extends Controller
 
         $image=new \App\Image();
         $image->name = $name;
-        $image->article()->associate($article);
         $image->save();
+        
+        
+        $article->images()->attach($image->id);
 
         flash('Articulo creado con exito')->success();
 

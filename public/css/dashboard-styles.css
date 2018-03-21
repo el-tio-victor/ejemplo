@@ -1,6 +1,13 @@
-
+h3{
+    padding: .3rem;
+    background-color: #ccc;
+}
 .header-wrapper{
     min-height: 2rem;
+}
+.header-wrapper svg{
+    width: 2.5rem;
+    height: 2.5rem;;
 }
 .panel-menu-btn:hover,
 .panel-menu-header{

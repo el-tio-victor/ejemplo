@@ -1,8 +1,7 @@
 @extends('dashboard.template.main')
 
 @section('title')
-    <h2>Listado de articulos</h2>
-    
+    <h3>Listado de articulos</h3> 
 @endsection
 
 @section('content')

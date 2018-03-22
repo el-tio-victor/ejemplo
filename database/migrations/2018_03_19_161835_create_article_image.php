@@ -25,6 +25,7 @@ class CreateArticleImage extends Migration
         });
     }
 
+    
     /**
      * Reverse the migrations.
      *

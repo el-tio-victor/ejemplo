@@ -28,7 +28,11 @@
             <div class="col  p-1 panel-menu-header">
                 <strong>Blog</strong>
             </div>
-            @include('dashboard.template.partials.navDashboard')
+            @include('dashboard.template.partials.navDashboardBlog')
+            <div class="col  p-1 panel-menu-header">
+                <strong>Works</strong>
+            </div>
+            @include('dashboard.template.partials.navDashboardWorks')
             
         </div>
         <div class=' col panel-cont'>

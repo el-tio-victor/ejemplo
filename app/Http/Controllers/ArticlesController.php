@@ -12,6 +12,8 @@ use illuminate\Support\Facades\Redirect;
 use Laracasts\Flash;
 use \Cviebrock\EloquentSluggable\Services\SlugService;
 
+use Illuminate\Support\Facades\Auth;
+
 class ArticlesController extends Controller
 {
     /**
@@ -21,7 +23,9 @@ class ArticlesController extends Controller
      */
     public function index(Request $r)
     {
+        //dd(Auth::user()->id);
         $articles = Article::SearchArticle($r->title)
+            ->where('user_id', Auth::user()->id)
             ->orderBy('id','DES')
             ->paginate(4);
         $articles->each(function($articles){

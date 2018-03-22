@@ -1,7 +1,7 @@
 @extends('dashboard.template.main')
 
 @section('title')
-    <h2>Listado de  Imágenes</h2>
+    <h3 class='text-center'>Listado de  Imágenes</h3 class='text-center'>
 @endsection
 
 @section('content')
@@ -11,7 +11,9 @@
                 <div class="card">
                     <img class="card-img-top" src="/images/articles/{{$image->name}} " alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">  {{$image->article->title}} </h5>
+                        <h5 class="card-title"> 
+                             {{$image->title}}
+                        </h5>
                         
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>

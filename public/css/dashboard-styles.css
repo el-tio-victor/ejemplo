@@ -1,6 +1,25 @@
 h3{
     padding: .3rem;
+    
+}
+h3,
+.footer-form{
+    background-color: rgb(133, 132, 132);
+
+}
+.nav-link.active{
+    background-color: #f36e2b;
+    color:#666;
+}
+.footer-form{
+    margin-top: .1rem;
+}
+.cont-form{
     background-color: #ccc;
+}
+.help-block{
+    color: rgb(194, 54, 49);
+    display: block;
 }
 .header-wrapper{
     min-height: 2rem;
@@ -12,6 +31,9 @@ h3{
 .panel-menu-btn:hover,
 .panel-menu-header{
     background-color: #f36e2b;
+}
+.table td{
+    max-width: 15rem;
 }
 .panel-menu{
     min-width: 120px;
@@ -37,3 +59,13 @@ h3{
     border-color: #ea5106!important;
     border-width: .2rem!important;
 }
+.main{
+    padding: 1rem;
+}
+
+@media (min-width: 992px) { 
+  
+    .wrapper{
+        padding: 2rem 0;
+    }
+ }

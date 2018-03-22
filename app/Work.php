@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 
 class Work extends Model
 {
@@ -14,6 +16,15 @@ class Work extends Model
     protected $fillable=['title','detail','services'];
 
     public function images(){
-        return $this->hasMany('App\Image');
+        return $this->belongsToMany('App\Image','work_image');
+    }
+
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
     }
 }

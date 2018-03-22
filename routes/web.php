@@ -64,10 +64,13 @@ Route::group(['prefix' => 'dashboard','middleware'=>'auth'],function(){
         "uses" => "HomeController@searchCategory",
         "as"  => "home.search.category"
     ]);
-  Route::get("tags/{id}/searchTag",[
+    Route::get("tags/{id}/searchTag",[
         "uses" => "HomeController@searchTag",
         "as"  => "home.search.tag"
     ]);
+
+
+    Route::Resource('works','Work\WorksController');
 
    
 

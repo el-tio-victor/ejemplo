@@ -26,6 +26,7 @@ class Article extends Model
     public function images(){
         return $this->belongsToMany('App\Image');
     }
+    
 
     public function tags(){
         return $this->belongsToMany('App\Tag');

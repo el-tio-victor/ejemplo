@@ -10,10 +10,10 @@ class Image extends Model
     protected $fillable=['name'];
 
     public function articles(){
-        return $this->belongsToMany('App\Article')->withTimeStamps();
+        return $this->belongsToMany('App\Article')->withPivot('article_id', 'image_id');
     }
 
-    public function work(){
-        return $this->belongsTo('App\Work');
+    public function works(){
+        return $this->belongsToMany('App\Work','work_image')->withPivot('article_id', 'image_id');
     }
 }

@@ -46,7 +46,6 @@
                 <div class="col-8">
                     {!!  Form::file('image') !!}
                 </div>
-                
             </div>
             <div class="col border-top text-center">
                 {!! Form::submit('Crear',['class'=>'btn btn-success']) !!}

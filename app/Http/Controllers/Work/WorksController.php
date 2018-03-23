@@ -81,7 +81,9 @@ class WorksController extends Controller
      */
     public function edit($id)
     {
-        //
+        $work = Work::find($id);
+        return view('dashboard.works.work.edit')
+            ->with('work',$work);
     }
 
     /**
@@ -93,7 +95,11 @@ class WorksController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $work = Work::find($id);
+        $work->fill($request->all());
+        $work->save();
+        flash('Campo Modificado')->success();
+        return redirect()->route('works.index');
     }
 
     /**
@@ -104,6 +110,11 @@ class WorksController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $work = Work::find($id);
+        //dd($id);
+        $work->delete();
+
+        flash('Elemento eliminado')->error();
+        return redirect()->route('works.index');
     }
 }

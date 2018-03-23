@@ -6,16 +6,18 @@
     @component('home.blog.components.simple-panel')
         @slot('article')
                 @foreach($articles as $article)
-                    <article class="col-10 col-sm-6 m-auto mb-md-4 article">
-                        <div class="col m-auto card-image  articles-cont-image">
+                    <article class="col-10 col-sm-6 m-auto mb-md-4 card article">
+                        <div class=' card-image-cont'>
                             @foreach($article->images as $image)
                                 <a href="{{route('blog.article',$article->slug)}}">
                                     <img src="{{asset('images/articles/'.$image->name)}}"
-                                    alt="{{$article->title.' blog gomez-ste'}}" class='article-image'
+                                    alt="{{$article->title.' blog gomez-ste'}}" class='card-image-top'
                                     width="450" height="250">
                                 </a> 
                             @endforeach
                         </div>
+                            
+                        
                         <div class="article-ribbon">
                              <a href="">
                                 <span class="badge badge-category">
@@ -25,11 +27,20 @@
                             </a>
                         </div>
                         <h3> {{$article->title}} </h3>
-
+                        <span>
+                            <i class="icon-clock"></i>&nbsp;{{$article->created_at->diffForHumans()}}
+                        </span>
+                        
                         <p> {!!$article->summary!!} </p>
+                        <a href="{{route('blog.article',$article->slug)}}">
+                            <span class='article-more-link'>
+                                Ver Mas
+                                <i class="transition icon-arrow-right2"> </i>
+                            </span>
+                        </a>
                         <footer class="row  ">        
                             <span class="d-flex align-items-center badge badge-light ">
-                            <i class="icon-clock"> </i>{{$article->created_at->diffForHumans()}}
+                            
                             </span>
                         </footer>
                     </article>

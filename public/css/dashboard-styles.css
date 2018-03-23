@@ -15,7 +15,8 @@ h3,
     margin-top: .1rem;
 }
 .cont-form{
-    background-color: #ccc;
+    border-left: .130rem solid rgb(133,132,132);
+    border-right: .130rem solid rgb(133,132,132);
 }
 .help-block{
     color: rgb(194, 54, 49);
@@ -61,6 +62,8 @@ h3,
 }
 .main{
     padding: 1rem;
+    background-color: #fff;
+    border-top: .125rem solid #ea5106 !important;
 }
 
 @media (min-width: 992px) { 

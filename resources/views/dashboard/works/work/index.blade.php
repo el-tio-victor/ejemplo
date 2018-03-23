@@ -31,8 +31,16 @@
                             <span>Por Añadir</span>
                         </td>
                         <td>
-                            <div><span class="btn btn-danger"><span class="icon-cross"></span></span></div>
-                            <div><span class="btn btn-warning"><span class="icon-font"></span></span></div>
+                            <a href=" {{route('works.destroy',$work->id)}} ">
+                                <div><span class="btn btn-danger"><span class="icon-cross"></span></span></div>
+                            </a>
+                            <a href="{{route('works.edit',$work->id)}}">
+                                <div>
+                                    <span class="btn btn-warning">
+                                        <i class="icon-font"></i>
+                                    </span>
+                                </div>
+                            </a>
                         </td>
                     </tr>
                 @endforeach

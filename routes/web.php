@@ -71,7 +71,12 @@ Route::group(['prefix' => 'dashboard','middleware'=>'auth'],function(){
 
 
     Route::Resource('works','Work\WorksController');
-
+    Route::get('works/{id}/destroy',
+        [
+            'uses' => 'Work\WorksController@destroy',
+            'as' => 'works.destroy'
+        ]
+    );
    
 
 });

@@ -5,11 +5,14 @@ html,body{
    font-size: 16px;
    font-weight: 400;
 }
+a:link{
+    text-decoration: none;
+}
 .color-black{
     color: #444;
 }
 p{
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 h2{
     font-weight: 700;
@@ -60,6 +63,26 @@ input[type=text]{
 .header-cont-nav>div{
     border-color:#f36e2b!important;
     border-width: .2rem!important;
+}
+.article.card{
+    border:0;
+}
+.article .card-image-cont{
+    overflow: hidden;
+    position: relative;
+    height: 16rem;
+}
+article img{
+    position: absolute;
+    left: -25%;
+}
+.article-more-link{
+    font-size: 1.3rem;
+    color: #ea5106;
+}
+.article-more-link:hover  i{
+    color: #444;
+    padding-left: .6rem;
 }
 .header-wrapper{
     min-height: 20rem;
@@ -121,6 +144,9 @@ input[type=text]{
 }
 .alert{
     padding: .35rem!important;
+}
+.transition{
+    transition:all .5s ease;
 }
 .msg{
     display: inline-block;

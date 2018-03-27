@@ -12,4 +12,5 @@ class AsideComposer{
         $view->with('categories',$categories)
         ->with('tags',$tags);
     }
+    
 }

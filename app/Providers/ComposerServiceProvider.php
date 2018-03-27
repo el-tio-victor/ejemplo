@@ -18,6 +18,12 @@ class ComposerServiceProvider extends ServiceProvider
         View::composer(['home.blog.partials.contentCategories',
             '']
             ,'App\Http\ViewComposers\AsideComposer');
+
+        View::composer(['home.index.partials.contentWorks'],
+            'App\Http\ViewComposers\IndexWorksComposer');
+
+        View::composer(['home.index.partials.contentArticles'],
+            'App\Http\ViewComposers\IndexArticlesComposer');
     }
 
     /**

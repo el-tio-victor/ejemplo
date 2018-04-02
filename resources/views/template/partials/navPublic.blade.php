@@ -6,7 +6,8 @@
         </li>
         <li class='nav-item'>
             
-            <a class="f1-25 nav-link{{ Route::is('blog') || Route::is('blog.article') ? ' active ' : ''}} " href="/blog">Blog</a>
+            <a class="f1-25 nav-link {{ Request::is('blog','blog/*') ? ' active ' : ''}} "
+             href="/blog">Blog</a>
         </li>
     </ul>
 </div>

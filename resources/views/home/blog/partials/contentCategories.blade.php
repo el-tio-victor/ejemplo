@@ -2,7 +2,7 @@
 <div class="m-1 p-1 border-bottom  aside-categories">
     <ul>
         @foreach($categories as $category)
-        <a href="{{ route( 'home.search.category',$category->id ) }}">
+        <a href="{{ route( 'blog.search.category',$category->id ) }}">
             <span class='badge badge-category'>
                  {{$category->name}} &nbsp;&nbsp; {{$category->articles->count()}} 
             </span>
@@ -14,7 +14,7 @@
 <div class="m-1 p-1 border-bottom aside-tags">
     <ul>
         @foreach($tags as $tag)
-            <a href=" {{ route( 'home.search.tag',$tag->id ) }} ">
+            <a href=" {{ route( 'blog.search.tag',$tag->id ) }} ">
                 <span class='badge badge-secondary'> {{$tag->name}} </span>
             </a>
         @endforeach

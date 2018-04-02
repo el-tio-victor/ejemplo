@@ -1,7 +1,8 @@
 
 @foreach($articles as $article)
 
-    <article class="col-10 col-sm-6 m-auto mb-md-4 card article">
+    <article class="col-12 col-md-6 col-lg-4 transition-x
+        sc-anim {{ (($loop->iteration/2) == 1 ) ? '' : 'delay-xx'}}  mb-md-4 card article">
        <div class=' card-image-cont'>
             <a href="{{route('blog.article',$article->slug)}}">
                 <img src="{{asset('images/articles/'.$article->image_name)}}"

@@ -60,14 +60,7 @@ Route::group(['prefix' => 'dashboard','middleware'=>'auth'],function(){
         ]
     );
     
-     Route::get("categories/{category_name}/searchCategory",[
-        "uses" => "HomeController@searchCategory",
-        "as"  => "home.search.category"
-    ]);
-    Route::get("tags/{id}/searchTag",[
-        "uses" => "HomeController@searchTag",
-        "as"  => "home.search.tag"
-    ]);
+    
 
 
     Route::Resource('works','Work\WorksController');
@@ -80,6 +73,16 @@ Route::group(['prefix' => 'dashboard','middleware'=>'auth'],function(){
    
 
 });
+
+
+Route::get("/blog/categories/{category_name}/searchCategory",[
+        "uses" => "HomeController@searchCategory",
+        "as"  => "blog.search.category"
+    ]);
+    Route::get("/blog/tags/{id}/searchTag",[
+        "uses" => "HomeController@searchTag",
+        "as"  => "blog.search.tag"
+    ]);
 
 Route::get('/dashboard',[function(){return view('dashboard.template.main');}])
 ->middleware('auth');

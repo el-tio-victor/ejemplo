@@ -35,6 +35,22 @@
                 </footer>
             </article>
         @endslot
+
+        @slot('paginate')
+            <nav aria-label="navigation border border-success ">
+                <ul class='pagination'>
+                    <li>
+                        <a class="article-more-link " href="">
+                            <i class="icon-arrow-left2 transition"> </i>Regresar a Posts
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        @endslot
     
     @endcomponent
+@endsection
+
+@section('footer')
+    @include('template.partials.footer')
 @endsection

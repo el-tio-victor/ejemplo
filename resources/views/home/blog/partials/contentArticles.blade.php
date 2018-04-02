@@ -1,12 +1,17 @@
 @extends('template.main')
-@component('home.partials.header')
-    <h1>Blog</h1>
-@endcomponent
+
+@section('header')
+    @component('home.partials.header')
+        <h1>Blog</h1>
+    @endcomponent
+@endsection
+
 @section('content')
+   
     @component('home.blog.components.simple-panel')
         @slot('article')
                 @foreach($articles as $article)
-                    <article class="col-10 col-sm-6 m-auto mb-md-4 card article">
+                    <article class="col-10 col-sm-6   card article">
                         <div class=' card-image-cont'>
                             @foreach($article->images as $image)
                                 <a href="{{route('blog.article',$article->slug)}}">
@@ -30,8 +35,9 @@
                         <span>
                             <i class="icon-clock"></i>&nbsp;{{$article->created_at->diffForHumans()}}
                         </span>
-                        
-                        <p> {!!$article->summary!!} </p>
+                        <div class="article-text">
+                            <p> {!!$article->summary!!} </p>
+                        </div>
                         <a href="{{route('blog.article',$article->slug)}}">
                             <span class='article-more-link'>
                                 Ver Mas
@@ -44,10 +50,34 @@
                             </span>
                         </footer>
                     </article>
+                     
                 @endforeach
+                
+        @endslot
+        @slot('paginate')
+            <nav aria-label="navigation border border-success ">
+                    {{ $articles->links() }}
+            </nav>
         @endslot
     @endcomponent
+@endsection
 
-      
+@section('js')
+    <script src=" {{asset('js/scenesHeaderScrollMagic.js')}} "></script>
+    <script>
+        if($(window).width() > 768){
+            var c = new ScrollMagic.Controller()
+            var pinAsideScene = new ScrollMagic.Scene({
+                triggerElement: 'main',
+                triggerHook: 0
+            })
+            .setPin('.aside-blog-wrapper',{pushFollowers:false})
+            .addTo(c)
+            }
+    </script>
     
+@endsection
+
+@section('footer')
+    @include('template.partials.footer')
 @endsection

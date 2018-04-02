@@ -31,7 +31,7 @@ class UsersController extends Controller
      }
     public function index(){
        
-         $users=User::orderBy('id','ASC')->paginate(5);
+         $users=User::orderBy('id','ASC')->paginate(3);
          return view('dashboard.blog.users.index')->with('users',$users);
      } 
 

@@ -27,27 +27,28 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $articles = Article::orderBy('id','Des')->get();
-        $articles = $this->relations($articles);
+        $articles = Article::orderBy('id','Des')->simplePaginate(4);
+        
         return view('home.blog.partials.contentArticles')
             ->with('articles',$articles);
     }
 
     public function searchCategory($category_name){
         /*Buscar articulos por categoria */
-        $articles = \App\Article::where('category_id',$category_name)->get();
-        return view('home.partials.contentArticles')
+        $articles = \App\Article::where('category_id',$category_name)->simplePaginate();
+        
+        return view('home.blog.partials.contentArticles')
             ->with('articles',$articles);
         
     }
     public function searchTag($id){
         //$tag = \App\Tag::where('category_id',$id)->get();
         $tags = \App\Tag::where('id','=',$id)->first();
-        $articles= $tags->articles()->get();
+        $articles= $tags->articles()->simplePaginate();
         /*$articles->each(function($articles){
             $articles->category;
         });*/
-        return view('home.partials.contentArticles')
+        return view('home.blog.partials.contentArticles')
             ->with('articles',$articles); 
     }
     public function relations($rel){

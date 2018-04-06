@@ -11,7 +11,7 @@
 
 @section('content')
     <section class="container-fluid p-3 sc-trigger  no-templates">
-        <h2 class=' sc-anim transition-x'>No Templates</h2>
+        <h2 class=' sc-anim transition-x'><span class="c-o">Cero</span> Templates</h2>
         <div class="container d-flex flex-column align-items-center
           justify-content-center sc-trigger transition-x delay-xx wrapper">
             <h3 class='f2 text-center sc-anim transition-x  '>La web sin plantillas tan única<br> como tu.</h3>
@@ -25,28 +25,41 @@
         </div>
     </section>
 
-    <section class="container-fluid  p-3  no-templates sc-trigger">
-        <h2 class="sc-anim transition-x">Recent Work</h2>
+    <section class="container-fluid  p-3  recent-works sc-trigger">
+        <h2 class="sc-anim transition-x">
+            <span class="c-o bolder">¿</span>
+             Pero que has hecho
+            <span class="c-o bolder">?</span>
+        </h2>
         <div class="container sc-anim transition-x delay-xx  wrapper">
+            <p>Nada del otro mundo pero es mejor que nada y por algo se empiesa. Aqui un poco</p>
             @include('home.index.partials.contentWorks')
         </div>
     </section>
 
-    <section class="container-fluid  p-3 sm-trigger recent-articles">
-        <h2 class="sm-anim transition-xx ">Ultimate Articles</h2>
+    <section class="container-fluid  p-3 sc-trigger recent-articles">
+        <h2 class="sc-anim transition-x ">
+            Ultimos Posts en el
+            <span class="c-o">
+                blog
+            </span>
+        </h2>
         <div class="container wrapper">
             @include('home.index.partials.contentArticles')
         </div>
     </section>
-    <section class="container-fluid wrapper d-flex align-items-center justify-content-center  p-3 contact">
-        <div>
+    <section class="container-fluid wrapper d-flex align-items-center justify-content-center 
+         p-3 contact">
+        
+        <div class=''>
+            <h2 class='c-w'> Un poco sobre mi...</h2>
             <div class="container d-md-flex flex-nowrap  border ">
                 <div class='col-md-4 d-flex align-items-center justify-content-center  ' >
-                    <img src="{{asset('images/page/isotipo-gomez-site.svg')}}" alt="">
+                    <img src="{{asset('images/page/isotipo-gomez-site.svg')}}" alt="gomez-site logo">
                 </div>
                 <div class='col-md-4 '>
                     <div>
-                        <h3 class='c-o'>
+                        <h3 class=''>
                             Víctor Gómez
                         </h3>
                         <p>

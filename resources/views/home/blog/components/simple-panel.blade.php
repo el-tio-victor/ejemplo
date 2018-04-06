@@ -11,7 +11,8 @@
      <aside class="col-md-4 aside-blog">
          <div class="aside-blog-wrapper">
             @include('home.blog.partials.contentCategories')
+            <p class="p-1 m-1 f1 bg-o">De todo un pococontenido en este lugar.  </p>
          </div>
-            
+        
     </aside>
 </section>

@@ -28,7 +28,7 @@
                         <td>{{$work->services}}</td>
                         <td>{{$work->detail}}</td>
                         <td>
-                            <span>Por Añadir</span>
+                           {{$work->url}}
                         </td>
                         <td>
                             <a href=" {{route('works.destroy',$work->id)}} ">

@@ -7,6 +7,7 @@ html,body{
 }
 a:link{
     text-decoration: none;
+    color:white;
 }
 .color-black{
     color: #444;
@@ -63,7 +64,7 @@ input[type=text]{
 }
 .navbar-header .dropdown-menu{
     border-radius: 0!important;
-    background-color: transparent;
+    transition: all 2s ease;
     padding: 0 .3rem;
     border: 0;
 }
@@ -81,11 +82,14 @@ input[type=text]{
 }
 .fixed{
     position: fixed!important;
-    max-height: 4rem;
+    max-height: 7.8rem;
     background-color: #ea5106;
-    overflow: hidden;
     z-index: 100;
     top: 0!important;
+}
+.fixed .remove{
+    
+    display: none;
 }
 .no-templates,.wrapper-blog,.aside-blog{
     position: relative;
@@ -93,6 +97,9 @@ input[type=text]{
 }
 .header a{
     color: #444;
+}
+.header-cont-nav{
+    border-bottom: #f36e2b solid .2rem;
 }
 .header-cont-nav>div{
     border-color:#f36e2b!important;
@@ -115,16 +122,31 @@ article img{
     color: #ea5106;
 }
 .article-more-link:hover  i,
-.recent-articles .btn:hover i{
+.recent-articles .btn:hover i,
+.btn-l:hover i{
     color: #444;
     padding-left: .6rem;
+}
+.btn-l{
+    display: inline-block;
+    min-width: 4rem;
 }
 .contact{
     background:url('../images/page/bg.jpg') center no-repeat #ea5106;
     background-size: cover;
 }
+.contact h2{
+    margin: 0 0 2rem 0;
+     
+}
+.c-w{
+    color:#fff;
+}
 .c-o{
     color:#ea5106;
+}
+.bolder{
+    font-weight: 700;
 }
 .header-wrapper{
     min-height: 20rem;
@@ -141,7 +163,14 @@ article img{
     background-color: rgb(228, 225, 225);
     border-color:white!important;
 }
+.no-templates{
+    box-shadow: rgba(224, 77, 19, 0.2) 0 -15rem  10rem inset;
+}
+.recent-works{
+    
+    box-shadow: rgba(224, 77, 19, 0.2) 0 8rem  15rem inset;
 
+}
 .no-templates-images img:first-child{
     width: 200px;
     height: 200px;
@@ -155,7 +184,9 @@ article img{
     min-width: 4rem;
     border-radius: 0!important;
 }
-
+.recent-works{
+    overflow: hidden;
+}
 .btn{
     padding: .2rem;
     margin:.2rem;
@@ -183,6 +214,9 @@ article img{
     border: solid .09rem #555454;
     padding: .2rem .4rem;
     background-color: rgb(232, 236, 238);
+}
+.text-copright{
+    line-height: .9rem;
 }
 .icon-menu{
     font-size: 1.5rem;
@@ -253,7 +287,6 @@ article img{
 .f8{font-size: 8rem ;}
 .f9{font-size: 9rem ;}
 #iso-gs .path{
-    
     transform: translateY(4rem);
     animation-delay: .5s;
 }
@@ -265,7 +298,7 @@ article img{
 }
 #iso-gs.up{
     display: inline-block;
-    transform: translateY(-3.3rem);
+    transform: translateY(-7.9rem);
 }
 #iso-gs.up .path{
     animation: iso1up 1s.5s  1 ease forwards ;
@@ -308,7 +341,23 @@ article img{
 }
 
 @media (min-width: 576px) { 
-    
+    .fixed{
+        max-height: 4rem;
+        
+    }
+    #iso-gs.up{
+        transform: translateY(-11.7rem);
+    }
+    .header-cont-nav>div{
+        border-right: #f36e2b solid .1rem ;
+    }
+    .header-cont-nav>div:last-child{
+        border-left: #f36e2b solid .1rem ;
+        border-right:none;
+    }
+    .header-cont-nav{
+        border-bottom: none;
+    }
  }
 
 /* Medium devices (tablets, 768px and up)*/
@@ -316,6 +365,7 @@ article img{
     h3{
         font-size: 1.4rem;
     }
+    
     .no-templates-images img:last-child{
         width: 250px;
         height: 250px;
@@ -325,17 +375,20 @@ article img{
     .work{
         margin-bottom: 3rem;
     }
-    .work::after{
-        content: '';
-        border: solid .1rem #ea5106;
-    }
+    
     .recent-articles .articles-link{
         margin:4rem auto;
+    }
+    .work-wrapper{
+        max-width: 16rem;
     }
  }
 
 /* Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) { 
+    p{
+        font-size: 1.3rem;
+    }
     h3{
         font-size: 1.7rem;
     }
@@ -351,6 +404,10 @@ article img{
         margin-top: 0;
         margin-left: -50px;
     }
+    .work::after{
+        content: '';
+        border: solid .1rem #ea5106;
+    }
     .wrapper{
         padding: 4rem 0;
     }
@@ -364,6 +421,7 @@ article img{
         display: flex;
         justify-content: center;
     }
+    
  }
 
 /* Extra large devices (large desktops, 1200px and up)*/

@@ -48,6 +48,20 @@
                 </div>
                 
             </div>
+            <div class="form-group d-flex">
+                {!!Form::label('url','Url',['class'=>'text-right col'])!!}
+                <div class="col-8">
+                    {!!Form::textarea('url',null,['
+                        placeholder'=>'Url opcional',
+                        'class'=>'form-control'])!!}
+                    @if ($errors->has('detail'))
+                        <span class="help-block">
+                            {{ $errors->first('detail') }}
+                        </span>
+                    @endif
+                </div>
+                
+            </div>
             <div class=" d-flex form-group">
                 {!! Form::label('img','Imagen',['class'=>'text-right col']) !!}
                 <div class="col-8">

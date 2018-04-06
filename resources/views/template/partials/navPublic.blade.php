@@ -1,5 +1,5 @@
 
-<div class="align-self-start border-right">
+<div class="align-self-start">
     <ul class="nav">
         <li class='nav-item '>
         <a class="f1-25 nav-link {{ Route::is('home') ? ' active ' : ''}}" href="/">Inicio</a>

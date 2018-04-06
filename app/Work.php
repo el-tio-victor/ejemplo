@@ -13,7 +13,7 @@ class Work extends Model
     use SluggableScopeHelpers;
 
     protected $table='works';
-    protected $fillable=['title','detail','services'];
+    protected $fillable=['title','detail','services','url'];
 
     public function images(){
         return $this->belongsToMany('App\Image','work_image');

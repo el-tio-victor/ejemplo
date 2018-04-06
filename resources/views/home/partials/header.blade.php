@@ -23,7 +23,7 @@
             </g>
         </svg>
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                        width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+            class='remove' width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
             <g id="Layer_1_1_">
                     
                     
@@ -204,7 +204,7 @@
                             </g>
                             </g>
         </svg>
-        <div class='border-top p-1 m-3'>
+        <div class='border-top remove p-1 m-3'>
             {{$slot}}
         </div> 
         

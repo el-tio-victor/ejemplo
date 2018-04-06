@@ -40,7 +40,7 @@
             <nav aria-label="navigation border border-success ">
                 <ul class='pagination'>
                     <li>
-                        <a class="article-more-link " href="">
+                        <a class="article-more-link " href=" {{route('blog')}} ">
                             <i class="icon-arrow-left2 transition"> </i>Regresar a Posts
                         </a>
                     </li>
@@ -51,6 +51,13 @@
     @endcomponent
 @endsection
 
+@section('js')
+
+    <script src=" {{asset('js/scenesHeaderScrollMagic.js')}} "></script>
+    <script src=" {{ asset('js/scenesAsideBlogScrollMagic.js') }}   ">
+    </script>
+
+@endsection
 @section('footer')
     @include('template.partials.footer')
 @endsection

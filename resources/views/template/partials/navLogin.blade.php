@@ -1,4 +1,4 @@
-<div class="border-left">
+<div class="">
     <div class="navbar-header">         
         <ul class='nav '>
            

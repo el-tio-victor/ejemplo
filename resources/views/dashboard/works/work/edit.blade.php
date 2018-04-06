@@ -48,7 +48,20 @@
                 </div>
                 
             </div>
-            
+            <div class="form-group d-flex">
+                {!!Form::label('url','Url',['class'=>'text-right col'])!!}
+                <div class="col-8">
+                    {!!Form::textarea('url',$work->url ,['
+                        placeholder'=>'descripción del trabajo del trabajo',
+                        'class'=>'form-control'])!!}
+                    @if ($errors->has('detail'))
+                        <span class="help-block">
+                            {{ $errors->first('detail') }}
+                        </span>
+                    @endif
+                </div>
+                
+            </div>
             
     </div> 
     <div class="col border-top text-center p-1  footer-form">

@@ -3,7 +3,7 @@
 @section('header')
     @component('home.partials.header')
     
-            <h1>Index</h1>
+            <h1>Inicio</h1>
         
 
     @endcomponent
@@ -73,19 +73,34 @@
                         <p><i class='icon-envelop c-o'> </i>hola@gomez-site.mx</p>
                         <p><i class='icon-phone c-o'> </i>(222) 698 233</p>
                     </div>
-                    
                 </div>
             </div>
+            
         </div>
         
     </section>
-
+    <div class='contact-form'>
+        <p>Si lo prefieres envia un mensaje...</p>
+         @include('home.index.mail.formMail')
+    </div>
 
 @endsection
 
 @section('js')
     <script src=" {{asset('js/scenesHeaderScrollMagic.js')}} "></script>
     <script src=" {{asset('js/scenesIndexScrollMagic.js')}} ">
+    </script>
+    <script>
+        $('#btn-msg').click(function(e){
+            e.preventDefault();
+            var data= $('.form').serialize()
+            var url=$('.form').attr('action')
+            $.post(url,data,function(result){
+                alert(result)
+            }).fail(function(){
+                alert('Algo salio mAl')
+            })
+        })
     </script>
 @endsection
 

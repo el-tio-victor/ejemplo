@@ -105,6 +105,14 @@ Route::get('/blog/articles/{slug}',[
     "as"=>"blog.article"
 ]);
 
+//Route::AJAX('/send','HomeController@msg')->name('send');
+
+Route::post('/send',[
+    "uses"=>"HomeController@msg",
+    "as"=>"index.send"
+]);
+
+
 
 
 //Route::get('/admin/logout', 'Auth\LoginController@logout')->name('logout');

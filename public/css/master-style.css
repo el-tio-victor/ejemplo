@@ -30,9 +30,7 @@ h3{
     font-size: 1.4rem;
     font-weight: 500;
 }
-form{
-    display: inline-block;
-}
+
 .badge{
     font-weight: 500;
     font-size: .92rem;
@@ -42,6 +40,57 @@ button:focus,
 input:focus{
     outline: 0!important;
     border:0!important;
+}
+.contact-form>div{
+    position: relative;
+    width:24rem;
+    margin: auto;
+}
+.contact-form>div:before,
+.contact-form>div:after{
+    display: block;
+    position: absolute;
+    top: 25%;
+    content: '';
+    width: 60px;
+    height: 94px;
+    background-image: url('../images/page/envelope-left.svg');
+    background-size: 100%;
+}
+.contact-form>div:before{
+    left:-60px;
+}
+.contact-form>div:after{
+   
+    transform:rotateY(180deg) ;
+    right:-60px;
+}
+.contact-form .form-group{
+    width:20rem;
+    overflow: hidden;   
+}
+.contact-form .form-control{
+    border-radius: 0;
+    background:transparent;
+    border: 0;
+    border-bottom:solid .125rem #555;
+    margin-left: 1rem;
+}
+.contact-form  label{
+    min-width: 4.5rem;
+    font-weight: 700;
+    color: #555;
+}
+.contact-form .submit{
+    background-color: transparent;
+    padding: .25rem;
+    margin-top: .5rem;
+    border:0;
+    font-weight: 700;
+}
+.contact-form .submit:hover{
+    background-color: #555;
+    cursor: pointer;
 }
 input[type=text]{
     padding: .1rem .4rem;;

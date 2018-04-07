@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 use App\Article;
 use App\Category;
@@ -62,6 +63,16 @@ class HomeController extends Controller
     public function relationTag(){
         $tags = \App\Tag::where('id','=',$id)->first();
         return $rel= $tags->articles()->get();
+    }
+
+    public function msg(Request $r){
+        
+        if($r->ajax()){
+            Mail::to('hola@gomez-site.mx')->send(new \App\Mail\Message($r->msg,$r->name,$r->mail));
+            return 'ok';
+
+        }
+        
     }
     
 }

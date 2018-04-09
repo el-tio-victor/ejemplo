@@ -46,7 +46,6 @@ $(document).ready(function(){
     })*/
     var time_delay = 300;
     $('.letter-logo').each(function(index,element){
-        console.log('el texto es ' + index)
         if(index == 0 ){
             $(this).delay( (10) ).velocity({
                 opacity:'1',

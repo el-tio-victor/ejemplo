@@ -43,8 +43,12 @@ input:focus{
 }
 .contact-form>div{
     position: relative;
-    width:24rem;
+    width:0;/*24rem*/
     margin: auto;
+    padding: 3rem 0;
+}
+.contact-form>div.show-form{
+    width: 24rem;
 }
 .contact-form>div:before,
 .contact-form>div:after{
@@ -54,6 +58,7 @@ input:focus{
     content: '';
     width: 60px;
     height: 94px;
+    opacity: .9;
     background-image: url('../images/page/envelope-left.svg');
     background-size: 100%;
 }
@@ -66,8 +71,14 @@ input:focus{
     right:-60px;
 }
 .contact-form .form-group{
-    width:20rem;
+    width:0;/*20rem*/
+    display: none;
     overflow: hidden;   
+}
+div.show-form .form-group{
+    width: 20rem!important;
+    display: block;
+    transition-delay: 2s;
 }
 .contact-form .form-control{
     border-radius: 0;
@@ -281,6 +292,9 @@ article img{
 .transition-x{
     transition:all 1s ease;
 }
+.transition-xx{
+    transition:all 1.5s ease;
+}
 .msg{
     display: inline-block;
     padding:.2rem;
@@ -431,6 +445,10 @@ article img{
     .work-wrapper{
         max-width: 16rem;
     }
+    .contact-form>p{
+        margin-left: 10rem;
+        padding-top: 4rem;
+    }
  }
 
 /* Large devices (desktops, 992px and up)*/
@@ -470,6 +488,7 @@ article img{
         display: flex;
         justify-content: center;
     }
+
     
  }
 

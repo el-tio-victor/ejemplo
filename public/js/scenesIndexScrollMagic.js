@@ -17,7 +17,16 @@ var controller = new ScrollMagic.Controller()
             .addTo(controller)
 
             })
-
+        //Escena de formulario de contacto
+    
+        
+        var scFormContact = new ScrollMagic.Scene({
+            triggerElement : '.contact-form',
+            triggerHook: .7,
+            reverse : false
+        })
+        .setClassToggle('.contact-form > div', 'show-form')
+        .addTo(controller)
            
         
         

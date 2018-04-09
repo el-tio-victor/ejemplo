@@ -79,7 +79,7 @@
         </div>
         
     </section>
-    <div class='contact-form'>
+    <div class='contact-form '>
         <p>Si lo prefieres envia un mensaje...</p>
          @include('home.index.mail.formMail')
     </div>

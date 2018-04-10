@@ -54,11 +54,10 @@ input:focus{
 .contact-form>div:after{
     display: block;
     position: absolute;
-    top: 25%;
+    top: 40%;
     content: '';
     width: 60px;
     height: 94px;
-    opacity: .9;
     background-image: url('../images/page/envelope-left.svg');
     background-size: 100%;
 }
@@ -151,6 +150,9 @@ input[type=text]{
     
     display: none;
 }
+.fixed .header-wrapper{
+    min-height: 5px;
+}
 .no-templates,.wrapper-blog,.aside-blog{
     position: relative;
     background-color: #fff;
@@ -190,6 +192,9 @@ article img{
 .btn-l{
     display: inline-block;
     min-width: 4rem;
+}
+#btn-msg{
+    margin-left: -5rem;
 }
 .contact{
     background:url('../images/page/bg.jpg') center no-repeat #ea5106;

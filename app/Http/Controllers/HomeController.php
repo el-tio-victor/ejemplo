@@ -9,6 +9,7 @@ use App\Article;
 use App\Category;
 
 use Carbon\Carbon;
+use App\Http\Requests\ContactRequest;
 
 class HomeController extends Controller
 {
@@ -65,11 +66,11 @@ class HomeController extends Controller
         return $rel= $tags->articles()->get();
     }
 
-    public function msg(Request $r){
+    public function msg(ContactRequest $r){
         
         if($r->ajax()){
+            
             Mail::to('hola@gomez-site.mx')->send(new \App\Mail\Message($r->msg,$r->name,$r->mail));
-            return 'ok';
 
         }
         

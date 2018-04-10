@@ -91,16 +91,108 @@
     <script src=" {{asset('js/scenesIndexScrollMagic.js')}} ">
     </script>
     <script>
+        var keyName=false
+        var keyMail=false
+        var keyMsg=false
+        var el = $('.onfocus')
+        
+        var interval_time=0
+        /*Evento click en botn de formulario contacto*/
         $('#btn-msg').click(function(e){
             e.preventDefault();
             var data= $('.form').serialize()
             var url=$('.form').attr('action')
             $.post(url,data,function(result){
-                alert(result)
-            }).fail(function(){
-                alert('Algo salio mAl')
+                $('.form input').val('');
+                $('.form textarea').val('');
+                alert_msg( true,'Mensaje enviado en breve recibiras respuesta ',true);
+            }).fail(function(respuesta){
+                console.log(respuesta)
+                alert_msg( true,'Ocurrió un error intentalo mas tarde o verifica tus datos',false);
             })
         })
+        
+        $('.onfocus').focus(function(){
+            var focus_enter= true
+            var el = $(this)
+            var lenght=($(this).data('input') == 'name') ? 5 : 10
+            var key=($(this).data('input') == 'name') ? 'name' : 'msg'
+            var sibling = $(this).siblings('span')
+             console.log($(this).data('input'))
+            if($(this).data('input') == 'correo'){
+                console.log('pinchaste correo')
+                clearInterval(interval_time)
+                interval_time=setInterval(function(){
+                    validateMail(el,sibling)
+                },2000)
+            }
+            else{
+                if(focus_enter){
+                    clearInterval(interval_time)
+                    interval_time=setInterval(function(){
+                        v_time(el,sibling,5,key)
+                    },2000)
+                }
+            }
+            
+        })
+    /*Funcion de validacion correo en formulario de contacto*/
+        function validateMail(el,sibling){
+            emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+                    //Se muestra un texto a modo de ejemplo, luego va a ser un icono
+                    console.log(el)
+                    if (emailRegex.test(el[0].value.trim())) {
+                        sibling[0].style.color='green'
+                        keyMail = true
+                        focus_enter=false
+                        if(keyName & keyMail & keyMsg)
+                            validated()
+                    }
+                    else{
+                        
+                    }
+        }
+
+        function v_time( el,sibling,length,key ){
+            console.log(interval_time+' time')
+            if( ( el[0].value.trim().length > length  ) ){
+                sibling[0].style.color='green';
+                (key == 'name') ? keyName=true : keyMsg =true
+                clearInterval(interval_time)
+
+                if(keyName & keyMail & keyMsg)
+                    validated()
+            }
+        }
+        function validated(){
+            $('#btn-msg').css('margin-left','1rem')
+            $('#alert-msg').css('opacity','0')
+        }
+
+        function alert_msg(show , msg ,ok){
+            if(show){
+                $('#alert-msg').css({
+                    'opacity':'1',
+                    'background-color':'#498547'
+                })
+                $('#btn-msg').css('margin-left','-10rem')
+            }
+            if(ok){
+                $('#alert-msg i').toggleClass('icon-point-up').toggleClass('icon-happy')
+                setTimeout(function(){
+                    $('#alert-msg i').parents('div.show-form').toggleClass('show-form')
+                }, 5000);
+            }
+            else{
+                $('#alert-msg i').toggleClass('icon-point-up').toggleClass('icon-sad')
+            }
+            $('#alert-msg span').html(msg)
+
+                
+        }
+
+
+        
     </script>
 @endsection
 
